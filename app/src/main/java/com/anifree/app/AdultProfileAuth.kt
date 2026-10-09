@@ -1,12 +1,12 @@
 package com.anifree.app
 
-import androidx.activity.ComponentActivity
+import androidx.fragment.app.FragmentActivity
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 
 object AdultProfileAuth {
-    fun request(activity: ComponentActivity, onResult: (Boolean) -> Unit) {
+    fun request(activity: FragmentActivity, onResult: (Boolean) -> Unit) {
         val authenticators = BiometricManager.Authenticators.BIOMETRIC_STRONG or
             BiometricManager.Authenticators.DEVICE_CREDENTIAL
         val manager = BiometricManager.from(activity)
